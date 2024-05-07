@@ -1,4 +1,5 @@
 export const companyTitle: string = "DigiArno";
+export const companyTagline: string = "WORLD'S FINEST TECHNOLOGY HUB";
 export const companyDescription: string =
   "Digiarno Institude | Digiarno Company";
 export const keywords: string = `${companyTitle}, ${companyTitle} Institude, ${companyTitle} Company, IT Company, IT Solutions, Web Development, Full Stack development, Mobile App Development, Graphic Designing, Video Editing`;

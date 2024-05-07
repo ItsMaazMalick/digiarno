@@ -15,19 +15,13 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TeamCard } from "@/components/cards/TeamCard";
 import { TeamSection } from "@/components/TeamSection";
+import { HeroSection } from "@/components/hero/hero-section";
 
 export default function Home() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <div className="overflow-hidden my-8 px-1 lg:px-20">
-        <Image
-          src={"/images/hero-image.jpg"}
-          alt=""
-          width="1000"
-          height="1000"
-          className="w-full shadow-lg shadow-primary rounded-lg"
-        />
-      </div>
+      <HeroSection />
+
       <div className="mx-auto mt-10">
         <Technologies />
       </div>
