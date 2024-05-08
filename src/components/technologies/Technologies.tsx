@@ -5,7 +5,7 @@ import { technologies } from "@/constants/technologies";
 
 export function Technologies() {
   return (
-    <ScrollArea className="w-screen lg:w-[calc(100vw-100px)] whitespace-nowrap rounded-md border p-4">
+    <ScrollArea className="w-full whitespace-nowrap rounded-md border p-4">
       <div className="flex w-max space-x-4">
         {technologies.map(
           (tech: { title: string; image: string }, index: number) => (

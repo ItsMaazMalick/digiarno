@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/menubar";
 import React, { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import { companyTitle } from "@/constants/company";
+import { companyMail, companyTitle } from "@/constants/company";
 
 export function Header() {
   const pathname = usePathname();
@@ -44,7 +44,7 @@ export function Header() {
       <div
         className={`sticky top-0 z-50 ${
           scrolled ? "bg-white shadow-md" : "bg-black"
-        }  w-screen flex justify-between py-1 px-8 h-[50px]`}
+        }  w-screen flex justify-between py-1 px-4 lg:px-32 h-[50px]`}
       >
         <Link href="/" className="flex items-center gap-2">
           {/* <Image src={"/logo.png"} alt="DigiArno Logo" width={50} height={50} /> */}
@@ -115,9 +115,9 @@ function MobileMenu({ children }: { children: React.ReactNode }) {
 
 function TopHeader() {
   return (
-    <div className="hidden w-screen lg:flex justify-between items-center py-1 px-8 text-sm bg-primary text-primary-foreground font-light h-[25px]">
-      <p>Welcome to DigiArno Institude!</p>
-      <p>info@digianro.com</p>
+    <div className="hidden w-screen lg:flex justify-between items-center py-1 md:px-32 text-sm bg-primary text-primary-foreground font-light h-[25px]">
+      <p>Welcome to {companyTitle} Institude!</p>
+      <p>{companyMail}</p>
     </div>
   );
 }

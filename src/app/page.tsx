@@ -2,7 +2,6 @@ import { Technologies } from "@/components/technologies/Technologies";
 import { TitleText } from "@/components/title/TitleText";
 import { technologies } from "@/constants/technologies";
 import Image from "next/image";
-import { ServiceCard } from "@/components/cards/ServiceCard";
 import { services } from "@/constants/services";
 import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
@@ -19,12 +18,12 @@ import { HeroSection } from "@/components/hero/hero-section";
 
 export default function Home() {
   return (
-    <div className="w-screen flex flex-col flex-grow mb-4">
+    <div className="w-screen flex flex-col flex-grow mb-4 px-2 lg:px-20">
       <HeroSection />
 
-      <div className="mx-auto mt-10">
+      {/* <div className="mx-auto mt-10">
         <Technologies />
-      </div>
+      </div> */}
       <TitleText
         title="Discover Courses Across Departments"
         desc="Your ideas, our expertise, your success."
