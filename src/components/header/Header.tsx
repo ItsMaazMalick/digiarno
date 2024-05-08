@@ -78,7 +78,7 @@ export function Header() {
         </div>
         <div className="flex lg:hidden items-center">
           <MobileMenu>
-            <Menu />
+            <Menu className="text-primary" />
           </MobileMenu>
         </div>
       </div>
@@ -92,7 +92,7 @@ function MobileMenu({ children }: { children: React.ReactNode }) {
   return (
     <Menubar>
       <MenubarMenu>
-        <MenubarTrigger>{children}</MenubarTrigger>
+        <MenubarTrigger className="py-0 px-1">{children}</MenubarTrigger>
         <MenubarContent className="mr-1">
           {navlinks.map(
             (link: { title: string; href: string }, index: number) => (

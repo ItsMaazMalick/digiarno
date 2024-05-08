@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} overflow-x-hidden`}>
-        <main className="w-screen min-h-screen flex flex-col items-center">
+        <main className="w-[100dvw] min-h-[100dvh] flex flex-col items-center">
           <Header />
           {children}
           <Footer />

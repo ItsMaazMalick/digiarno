@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { clientSays } from "@/constants/clientSays";
+import { AnimatedCard } from "./cards/animated-card";
 
 export function WhatClientSays() {
   return (
@@ -29,30 +30,32 @@ export function WhatClientSays() {
               key={index}
               className="flex justify-center items-center"
             >
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex flex-col md:flex-row items-center justify-center p-6 gap-2">
-                    <Image
-                      src={client.image}
-                      alt={client.name}
-                      width={100}
-                      height={100}
-                      className="object-contain rounded-full border"
-                    />
-                    <div>
-                      <p className="text-center md:text-start text-xl font-bold text-primary">
-                        {client.name}
-                      </p>
-                      <p className="text-center md:text-start font-semibold">
-                        {client.position}
-                      </p>
-                      <p className="text-center md:text-start font-light">
-                        {client.desc}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              <AnimatedCard option={2}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex flex-col md:flex-row items-center justify-center p-6 gap-2">
+                      <Image
+                        src={client.image}
+                        alt={client.name}
+                        width={100}
+                        height={100}
+                        className="object-contain rounded-full border"
+                      />
+                      <div>
+                        <p className="text-center md:text-start text-xl font-bold text-primary">
+                          {client.name}
+                        </p>
+                        <p className="text-center md:text-start font-semibold">
+                          {client.position}
+                        </p>
+                        <p className="text-center md:text-start font-light">
+                          {client.desc}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </AnimatedCard>
             </CarouselItem>
           )
         )}

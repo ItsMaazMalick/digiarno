@@ -15,6 +15,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { TeamCard } from "@/components/cards/TeamCard";
 import { TeamSection } from "@/components/TeamSection";
 import { HeroSection } from "@/components/hero/hero-section";
+import { AnimatedCard } from "@/components/cards/animated-card";
 
 export default function Home() {
   return (
@@ -24,15 +25,19 @@ export default function Home() {
       {/* <div className="mx-auto mt-10">
         <Technologies />
       </div> */}
-      <TitleText
-        title="Discover Courses Across Departments"
-        desc="Your ideas, our expertise, your success."
-      />
+      <AnimatedCard option={4}>
+        <TitleText
+          title="Discover Courses Across Departments"
+          desc="Your ideas, our expertise, your success."
+        />
+      </AnimatedCard>
       <Services />
-      <TitleText
-        title="Why choose us?"
-        desc="Here are some of the reasons why you should choose Digiarno for your software Development Services."
-      />
+      <AnimatedCard option={4}>
+        <TitleText
+          title="Why choose us?"
+          desc="Here are some of the reasons why you should choose Digiarno for your software Development Services."
+        />
+      </AnimatedCard>
       <p className="px-2 lg:px-12 mb-8">
         Digiarno has a team of skilled and experienced software engineers who
         can handle any kind of project, from simple websites to complex
@@ -42,7 +47,9 @@ export default function Home() {
         preferences.
       </p>
       <WhyChooseUs />
-      <TitleText title="WHAT CLIENTS SAY" />
+      <AnimatedCard option={4}>
+        <TitleText title="WHAT CLIENTS SAY" />
+      </AnimatedCard>
       <div className="mx-auto p-2">
         <WhatClientSays />
       </div>
