@@ -10,9 +10,7 @@ interface TeamSectionProps {
 export const TeamSection: React.FC<TeamSectionProps> = ({ title, team }) => {
   return (
     <div>
-      <AnimatedCard option={8}>
-        <TitleText title={title} />
-      </AnimatedCard>
+      <TitleText title={title} />
       <div className="flex flex-wrap justify-center items-center gap-4 px-1 lg:px-12">
         {team.map((member: any, index: number) => (
           <TeamCard

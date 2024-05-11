@@ -8,15 +8,17 @@ import {
   webDeveloper,
 } from "@/constants/team";
 import { TitleText } from "@/components/title/TitleText";
+import { HeroSection } from "@/components/hero/hero-section";
 
 export default function Team() {
   return (
-    <div className="mt-8">
+    <div className="w-screen flex flex-col flex-grow mb-4">
+      <HeroSection index={4} />
       <TitleText
         title="Meet Our Team"
         desc="Digiarno is well known Pakistani company. Digiarno was established in 2021, our aim is to resolve your problems with the latest technology and enhance your business lifestyle."
       />
-      <div className="flex flex-col md:flex-row justify-center items-center gap-2 p-20 bg-primary/10">
+      {/* <div className="flex flex-col md:flex-row justify-center items-center gap-2 p-20 bg-primary/10">
         <div className="relative flex-1 flex justify-center items-center">
           <Image
             src={"/images/team/ceo.png"}
@@ -30,7 +32,7 @@ export default function Team() {
           <h4 className="text-4xl font-bold text-primary">M. Noman Abbasi</h4>
           <p className="font-semibold text-xl">CEO</p>
         </div>
-      </div>
+      </div> */}
       {/* STAFF */}
       <TeamSection title="Meet Our Staff" team={staff.slice(0, 4)} />
       <TeamSection title="Meet Our Graphic Designer" team={graphicDesigner} />

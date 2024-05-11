@@ -28,7 +28,7 @@ export function ServiceCard({
                 src={image}
                 height="500"
                 width="500"
-                className="h-[80px] w-[80px] object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-[80px] w-[80px] object-contain rounded-xl group-hover/card:shadow-xl"
                 alt={title}
               />
             </CardItem>

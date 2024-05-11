@@ -3,15 +3,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { TitleText } from "@/components/title/TitleText";
 import { ContactUs } from "@/components/forms/contact-us-form";
+import { HeroSection } from "@/components/hero/hero-section";
 
 export default function Component() {
   return (
-    <section>
+    <div className="w-screen flex flex-col flex-grow mb-4">
+      <HeroSection index={3} />
       <TitleText
         title="Contact Us"
         desc="Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible."
       />
       <ContactUs />
-    </section>
+    </div>
   );
 }

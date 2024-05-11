@@ -40,11 +40,11 @@ export function Header() {
   }, []);
   return (
     <>
-      <TopHeader />
+      {/* <TopHeader /> */}
       <div
         className={`sticky top-0 z-50 ${
           scrolled ? "bg-white shadow-md" : "bg-black"
-        }  w-screen flex justify-between py-1 px-4 lg:px-32 h-[50px]`}
+        }  w-screen flex justify-between py-1 px-4 lg:px-32 h-[70px]`}
       >
         <Link href="/" className="flex items-center gap-2">
           {/* <Image src={"/logo.png"} alt="DigiArno Logo" width={50} height={50} /> */}
@@ -57,13 +57,13 @@ export function Header() {
           </h1>
         </Link>
         {/* LINKS */}
-        <div className="hidden lg:flex gap-4 justify-center items-center font-light">
+        <div className="hidden lg:flex gap-4 justify-center items-center font-bold">
           {navlinks.map(
             (link: { title: string; href: string }, index: number) => (
               <Link
                 key={index}
                 href={link.href}
-                className={`font-normal hover:text-primary  ${
+                className={` hover:text-primary  ${
                   pathname === link.href
                     ? "text-primary"
                     : scrolled
@@ -89,6 +89,19 @@ export function Header() {
 
 function MobileMenu({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Menubar>
       <MenubarMenu>
@@ -99,8 +112,8 @@ function MobileMenu({ children }: { children: React.ReactNode }) {
               <Link
                 key={index}
                 href={link.href}
-                className={`font-light text-primary hover:font-normal ${
-                  pathname === link.href ? "font-normal" : ""
+                className={` hover:text-primary  ${
+                  pathname === link.href ? "text-primary" : "text-black"
                 }`}
               >
                 <MenubarItem>{link.title}</MenubarItem>

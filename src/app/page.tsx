@@ -16,28 +16,27 @@ import { TeamCard } from "@/components/cards/TeamCard";
 import { TeamSection } from "@/components/TeamSection";
 import { HeroSection } from "@/components/hero/hero-section";
 import { AnimatedCard } from "@/components/cards/animated-card";
+import NumberTicker from "@/components/ui/number-ticker";
+import { numberOfClientAndOthers } from "@/constants/data";
+import { ClientsCounter } from "@/components/ClientsCounter";
 
 export default function Home() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4 px-2 lg:px-20">
-      <HeroSection />
+      <HeroSection index={1} />
 
       {/* <div className="mx-auto mt-10">
         <Technologies />
       </div> */}
-      <AnimatedCard option={4}>
-        <TitleText
-          title="Discover Courses Across Departments"
-          desc="Your ideas, our expertise, your success."
-        />
-      </AnimatedCard>
+      <TitleText
+        title="Discover Courses Across Departments"
+        desc="Your ideas, our expertise, your success."
+      />
       <Services />
-      <AnimatedCard option={4}>
-        <TitleText
-          title="Why choose us?"
-          desc="Here are some of the reasons why you should choose Digiarno for your software Development Services."
-        />
-      </AnimatedCard>
+      <TitleText
+        title="Why choose us?"
+        desc="Here are some of the reasons why you should choose Digiarno for your software Development Services."
+      />
       <p className="px-2 lg:px-12 mb-8">
         Digiarno has a team of skilled and experienced software engineers who
         can handle any kind of project, from simple websites to complex
@@ -47,9 +46,8 @@ export default function Home() {
         preferences.
       </p>
       <WhyChooseUs />
-      <AnimatedCard option={4}>
-        <TitleText title="WHAT CLIENTS SAY" />
-      </AnimatedCard>
+      <ClientsCounter />
+      <TitleText title="WHAT CLIENTS SAY" />
       <div className="mx-auto p-2">
         <WhatClientSays />
       </div>

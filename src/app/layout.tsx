@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
@@ -9,9 +9,9 @@ import {
   keywords,
 } from "@/constants/company";
 
-const roboto = Roboto({
+const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["100", "300", "500", "700", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} overflow-x-hidden`}>
+      <body className={`${openSans.className} overflow-x-hidden`}>
         <main className="w-[100dvw] min-h-[100dvh] flex flex-col items-center">
           <Header />
           {children}

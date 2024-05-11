@@ -14,7 +14,7 @@ export function Services() {
             key={index}
             title={service.title}
             image={service.image}
-            desc={service.desc}
+            desc={service.desc.slice(0, 280)}
           />
         )
       )}
