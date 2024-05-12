@@ -7,10 +7,17 @@ import { convertStringToWordArray } from "@/helpers/convertTextToWordsArray";
 import Image from "next/image";
 import Link from "next/link";
 
+const blogsHeroData = {
+  image: "/images/hero/hero-bg-6.jpg",
+  title: "Blogs",
+  description: "",
+  buttons: [],
+};
+
 export default function page() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <HeroSection index={6} />
+      <HeroSection data={blogsHeroData} />
       <TitleText title="Latest Blogs" />
       <div className="px-2 lg:px-32">
         {/* CONTAINER */}

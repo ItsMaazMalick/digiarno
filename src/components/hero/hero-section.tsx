@@ -2,28 +2,22 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { companyTagline, companyTitle } from "@/constants/company";
 import Link from "next/link";
-import {
-  aboutHeroData,
-  blogsHeroData,
-  contactHeroData,
-  homeHeroData,
-  servicesHeroData,
-  teamHeroData,
-} from "./hero-section-data";
+import { cn } from "@/lib/utils";
 
-export function HeroSection({ index }: { index: number }) {
-  let data =
-    index === 1
-      ? homeHeroData
-      : index === 2
-      ? servicesHeroData
-      : index === 3
-      ? contactHeroData
-      : index === 4
-      ? teamHeroData
-      : index === 5
-      ? aboutHeroData
-      : blogsHeroData;
+type HeroSectionData = {
+  data: {
+    image: string;
+    title: string;
+    description?: string;
+    buttons?: {
+      title: string;
+      href: string;
+    }[];
+  };
+  className?: string;
+};
+
+export function HeroSection({ data, className }: HeroSectionData) {
   return (
     <>
       <div className="absolute -z-50  left-0 w-full h-[calc(100dvh-70px)]">
@@ -35,7 +29,12 @@ export function HeroSection({ index }: { index: number }) {
         />
       </div>
       <div className="mx-auto h-[calc(100dvh-70px)] text-white flex justify-center items-center flex-col gap-6">
-        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold max-w-[600px] text-center uppercase">
+        <h2
+          className={cn(
+            "text-2xl md:text-4xl lg:text-6xl font-bold max-w-[600px] text-center uppercase",
+            className
+          )}
+        >
           {data.title}
         </h2>
         <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-yellow-400">

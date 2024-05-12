@@ -6,10 +6,17 @@ import { companyTitle } from "@/constants/company";
 import { services } from "@/constants/services";
 import Image from "next/image";
 
+const servicesHeroData = {
+  image: "/images/hero/hero-bg-2.png",
+  title: "Services",
+  description: "",
+  buttons: [],
+};
+
 export default function page() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <HeroSection index={2} />
+      <HeroSection data={servicesHeroData} />
       <TitleText
         title="CHOOSE YOUR DESIRED SERVICE"
         desc="And Let Us Worry About The Rest!"

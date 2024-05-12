@@ -5,10 +5,17 @@ import { TitleText } from "@/components/title/TitleText";
 import { ContactUs } from "@/components/forms/contact-us-form";
 import { HeroSection } from "@/components/hero/hero-section";
 
+const contactHeroData = {
+  image: "/images/hero/hero-bg-3.jpg",
+  title: "Contact Us",
+  description: "",
+  buttons: [],
+};
+
 export default function Component() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <HeroSection index={3} />
+      <HeroSection data={contactHeroData} />
       <TitleText
         title="Contact Us"
         desc="Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible."

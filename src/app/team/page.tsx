@@ -10,10 +10,17 @@ import {
 import { TitleText } from "@/components/title/TitleText";
 import { HeroSection } from "@/components/hero/hero-section";
 
+const teamHeroData = {
+  image: "/images/hero/hero-bg-4.jpg",
+  title: "team",
+  description: "",
+  buttons: [],
+};
+
 export default function Team() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <HeroSection index={4} />
+      <HeroSection data={teamHeroData} />
       <TitleText
         title="Meet Our Team"
         desc="Digiarno is well known Pakistani company. Digiarno was established in 2021, our aim is to resolve your problems with the latest technology and enhance your business lifestyle."

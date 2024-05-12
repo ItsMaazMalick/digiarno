@@ -20,10 +20,20 @@ import NumberTicker from "@/components/ui/number-ticker";
 import { numberOfClientAndOthers } from "@/constants/data";
 import { ClientsCounter } from "@/components/ClientsCounter";
 
+const homeHeroData = {
+  image: "/images/hero/hero-bg-1.gif",
+  title: "WORLD'S FINEST TECHNOLOGY HUB",
+  description: "Solution Provider",
+  buttons: [
+    { title: "View Services", href: "/services" },
+    { title: "Contact Us", href: "/contact-us" },
+  ],
+};
+
 export default function Home() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4 px-2 lg:px-20">
-      <HeroSection index={1} />
+      <HeroSection data={homeHeroData} />
 
       {/* <div className="mx-auto mt-10">
         <Technologies />

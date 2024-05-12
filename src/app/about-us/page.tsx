@@ -2,10 +2,17 @@ import { HeroSection } from "@/components/hero/hero-section";
 import { TitleText } from "@/components/title/TitleText";
 import { aboutUsData } from "@/constants/about-us";
 
+const aboutHeroData = {
+  image: "/images/hero/hero-bg-5.jpg",
+  title: "About Us",
+  description: "",
+  buttons: [],
+};
+
 export default function page() {
   return (
     <div className="w-screen flex flex-col flex-grow mb-4">
-      <HeroSection index={5} />
+      <HeroSection data={aboutHeroData} />
       <TitleText title="About Us" />
       <div className="px-2 lg:px-32">
         {aboutUsData.map(
