@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 const servicesHeroData = {
-  image: "/images/hero/hero-bg-2.png",
+  image: "/images/hero/services.png",
   title: "Services",
   description: "",
   buttons: [],

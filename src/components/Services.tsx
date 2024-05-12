@@ -3,7 +3,7 @@ import { ServiceCard } from "./cards/ServiceCard";
 
 export function Services() {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-4 px-2 lg:px-12">
+    <div className="flex flex-wrap justify-center items-stretch gap-4 px-2 lg:px-12">
       {services.map(
         (
           service: { title: string; image: string; desc: string },
@@ -14,7 +14,7 @@ export function Services() {
             key={index}
             title={service.title}
             image={service.image}
-            desc={service.desc.slice(0, 280)}
+            desc={service.desc}
           />
         )
       )}

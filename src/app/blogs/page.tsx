@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const blogsHeroData = {
-  image: "/images/hero/hero-bg-6.jpg",
+  image: "/images/hero/blogs.jpg",
   title: "Blogs",
   description: "",
   buttons: [],

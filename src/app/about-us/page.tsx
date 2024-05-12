@@ -5,7 +5,7 @@ import { companyDescription, companyTitle } from "@/constants/company";
 import { Metadata } from "next";
 
 const aboutHeroData = {
-  image: "/images/hero/hero-bg-5.jpg",
+  image: "/images/hero/about.jpg",
   title: "About Us",
   description: "",
   buttons: [],

@@ -23,7 +23,7 @@ import { Metadata } from "next";
 import { companyDescription, companyTitle } from "@/constants/company";
 
 const homeHeroData = {
-  image: "/images/hero/hero-bg-1.gif",
+  image: "/images/hero/home.gif",
   title: "WORLD'S FINEST TECHNOLOGY HUB",
   description: "Solution Provider",
   buttons: [
@@ -54,7 +54,7 @@ export default function Home() {
         title="Why choose us?"
         desc="Here are some of the reasons why you should choose Digiarno for your software Development Services."
       />
-      <p className="px-2 lg:px-12 mb-8">
+      <p className="px-2 lg:px-12 mb-8 text-center">
         Digiarno has a team of skilled and experienced software engineers who
         can handle any kind of project, from simple websites to complex
         applications. They have expertise in web, mobile, cloud, artificial

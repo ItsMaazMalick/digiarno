@@ -13,7 +13,7 @@ import { Metadata } from "next";
 import { companyDescription, companyTitle } from "@/constants/company";
 
 const teamHeroData = {
-  image: "/images/hero/hero-bg-4.jpg",
+  image: "/images/hero/team.jpg",
   title: "team",
   description: "",
   buttons: [],

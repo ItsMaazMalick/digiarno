@@ -22,13 +22,13 @@ export function ServiceCard({
     <div className={cn("w-full", className)}>
       <AnimatedCard option={1}>
         <CardContainer className="inter-var">
-          <CardBody className="bg-primary/10 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  h-auto rounded-xl p-6 border  overflow-hidden ring-[1px]">
-            <CardItem translateZ="100" className="w-[80px] mb-4 mx-auto">
+          <CardBody className="bg-primary/10 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] min-h-[415px] rounded-xl p-6 border  overflow-hidden ring-[1px]">
+            <CardItem translateZ="100" className="mb-4">
               <Image
                 src={image}
-                height="500"
-                width="500"
-                className="h-[80px] w-[80px] object-contain rounded-xl group-hover/card:shadow-xl"
+                width="1000"
+                height="1000"
+                className="h-[150px] rounded-xl group-hover/card:shadow-xl"
                 alt={title}
               />
             </CardItem>
@@ -43,7 +43,7 @@ export function ServiceCard({
               translateZ="60"
               className="text-neutral-500 text-sm max-w-sm mt-2 text-center"
             >
-              {desc}
+              {desc.length > 280 ? `${desc.slice(0, 280)}...` : desc}
             </CardItem>
             {/* Meaty part - Meteor effect */}
             <Meteors number={20} />

@@ -5,7 +5,7 @@ import { ResolvingMetadata } from "next";
 import Image from "next/image";
 
 const notFoundData = {
-  image: "/images/hero/hero-bg-1.gif",
+  image: "/images/hero/home.gif",
   title: "Blog Not Found",
   description: "",
   buttons: [],

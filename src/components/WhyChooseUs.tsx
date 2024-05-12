@@ -14,7 +14,7 @@ export function WhyChooseUs() {
             key={index}
             title={service.title}
             image={service.image}
-            desc={service.desc.slice(0, 280)}
+            desc={service.desc}
           />
         )
       )}
