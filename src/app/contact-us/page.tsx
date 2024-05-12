@@ -4,12 +4,19 @@ import { Button } from "@/components/ui/button";
 import { TitleText } from "@/components/title/TitleText";
 import { ContactUs } from "@/components/forms/contact-us-form";
 import { HeroSection } from "@/components/hero/hero-section";
+import { Metadata } from "next";
+import { companyDescription, companyTitle } from "@/constants/company";
 
 const contactHeroData = {
   image: "/images/hero/hero-bg-3.jpg",
   title: "Contact Us",
   description: "",
   buttons: [],
+};
+
+export const metadata: Metadata = {
+  title: `Contact Us | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function Component() {

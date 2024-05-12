@@ -3,7 +3,9 @@ import { TitleText } from "@/components/title/TitleText";
 import { Button } from "@/components/ui/button";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { blogs } from "@/constants/blogs";
+import { companyDescription, companyTitle } from "@/constants/company";
 import { convertStringToWordArray } from "@/helpers/convertTextToWordsArray";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +14,11 @@ const blogsHeroData = {
   title: "Blogs",
   description: "",
   buttons: [],
+};
+
+export const metadata: Metadata = {
+  title: `Blogs | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function page() {

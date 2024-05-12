@@ -19,6 +19,8 @@ import { AnimatedCard } from "@/components/cards/animated-card";
 import NumberTicker from "@/components/ui/number-ticker";
 import { numberOfClientAndOthers } from "@/constants/data";
 import { ClientsCounter } from "@/components/ClientsCounter";
+import { Metadata } from "next";
+import { companyDescription, companyTitle } from "@/constants/company";
 
 const homeHeroData = {
   image: "/images/hero/hero-bg-1.gif",
@@ -28,6 +30,11 @@ const homeHeroData = {
     { title: "View Services", href: "/services" },
     { title: "Contact Us", href: "/contact-us" },
   ],
+};
+
+export const metadata: Metadata = {
+  title: `Home | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function Home() {

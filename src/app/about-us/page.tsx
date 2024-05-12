@@ -1,12 +1,19 @@
 import { HeroSection } from "@/components/hero/hero-section";
 import { TitleText } from "@/components/title/TitleText";
 import { aboutUsData } from "@/constants/about-us";
+import { companyDescription, companyTitle } from "@/constants/company";
+import { Metadata } from "next";
 
 const aboutHeroData = {
   image: "/images/hero/hero-bg-5.jpg",
   title: "About Us",
   description: "",
   buttons: [],
+};
+
+export const metadata: Metadata = {
+  title: `About Us | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function page() {

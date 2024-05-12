@@ -2,8 +2,9 @@ import { ServicePageCard } from "@/components/cards/ServicePageCard";
 import { AnimatedCard } from "@/components/cards/animated-card";
 import { HeroSection } from "@/components/hero/hero-section";
 import { TitleText } from "@/components/title/TitleText";
-import { companyTitle } from "@/constants/company";
+import { companyDescription, companyTitle } from "@/constants/company";
 import { services } from "@/constants/services";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const servicesHeroData = {
@@ -11,6 +12,11 @@ const servicesHeroData = {
   title: "Services",
   description: "",
   buttons: [],
+};
+
+export const metadata: Metadata = {
+  title: `Services | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function page() {

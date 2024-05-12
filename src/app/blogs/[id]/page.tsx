@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/hero/hero-section";
 import { TitleText } from "@/components/title/TitleText";
 import { blogs } from "@/constants/blogs";
+import { ResolvingMetadata } from "next";
 import Image from "next/image";
 
 const notFoundData = {
@@ -9,6 +10,18 @@ const notFoundData = {
   description: "",
   buttons: [],
 };
+
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const id = params.id;
+
+  const blog = blogs.find((b) => String(b.id) === id);
+
+  return {
+    title: blog?.title,
+    description: blog?.desc,
+    keywords: blog?.keywords,
+  };
+}
 
 export default function page({ params }: { params: { id: string } }) {
   const blog = blogs.find((b) => String(b.id) === params.id);

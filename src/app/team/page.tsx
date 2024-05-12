@@ -9,12 +9,19 @@ import {
 } from "@/constants/team";
 import { TitleText } from "@/components/title/TitleText";
 import { HeroSection } from "@/components/hero/hero-section";
+import { Metadata } from "next";
+import { companyDescription, companyTitle } from "@/constants/company";
 
 const teamHeroData = {
   image: "/images/hero/hero-bg-4.jpg",
   title: "team",
   description: "",
   buttons: [],
+};
+
+export const metadata: Metadata = {
+  title: `Team | ${companyTitle}`,
+  description: companyDescription,
 };
 
 export default function Team() {
