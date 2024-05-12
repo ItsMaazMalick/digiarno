@@ -2,8 +2,7 @@ import { companyTitle } from "@/constants/company";
 import nodemailer from "nodemailer";
 export async function sendEmail(name: string, email: string, message: string) {
   const transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
+    service: "gmail",
     auth: {
       user: process.env.SMTP_EMAIL,
       pass: process.env.SMTP_PASSWORD,
@@ -11,13 +10,15 @@ export async function sendEmail(name: string, email: string, message: string) {
   });
 
   const mailOptions = {
-    from: email,
-    to: "itsmaazmalick@gmail.com",
-    subject: `Email from ${email}`,
+    from: process.env.SMTP_EMAIL,
+    to: process.env.SMTP_EMAIL,
+    subject: `Email from ${companyTitle}`,
     html: `<div>
-    <h3>${name}</h3>
-    <p style=margin-left:"10px">${message}</p>  
-    </div>`,
+      <h3>${name}</h3>
+      <p>${email}</p>
+      <p>${message}</p>  
+      </div>`,
+    replyTo: email, // This will set the sender's email as the reply-to address
   };
   const mailResponse = await transporter.sendMail(mailOptions);
   return mailResponse;
