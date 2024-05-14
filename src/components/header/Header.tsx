@@ -57,7 +57,7 @@ export function Header() {
           </h1>
         </Link>
         {/* LINKS */}
-        <div className="hidden lg:flex gap-4 justify-center items-center font-bold">
+        <div className="hidden lg:flex gap-6 justify-center items-center font-bold">
           {navlinks.map(
             (link: { title: string; href: string }, index: number) => (
               <Link
