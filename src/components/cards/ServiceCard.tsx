@@ -5,7 +5,6 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Meteors } from "../ui/meteors";
-import { AnimatedCard } from "./animated-card";
 
 export function ServiceCard({
   title,
@@ -20,7 +19,6 @@ export function ServiceCard({
 }) {
   return (
     <div className={cn("w-full", className)}>
-      <AnimatedCard option={1}>
         <CardContainer className="inter-var">
           <CardBody className="bg-primary/10 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] min-h-[415px] rounded-xl p-6 border  overflow-hidden ring-[1px]">
             <CardItem translateZ="100" className="mb-4">
@@ -49,7 +47,6 @@ export function ServiceCard({
             <Meteors number={20} />
           </CardBody>
         </CardContainer>
-      </AnimatedCard>
     </div>
   );
 }
